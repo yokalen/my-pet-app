@@ -1,0 +1,16 @@
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 64px;
+}
+
+span {
+  font-family: 'Roboto', sans-serif;
+}
+
+footer > p {
+    font-size: 11px;
+  }
+  
+.login a:hover {
+    box-shadow: 0 0 2px black;
+  }

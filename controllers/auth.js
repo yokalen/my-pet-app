@@ -4,7 +4,7 @@ const User = require("../models/User");
 
 exports.getLogin = (req, res) => {
   if (req.user) {
-    return res.redirect("/profile");
+    return res.redirect("/account");
   }
   res.render("login", {
     title: "Login",
@@ -65,6 +65,15 @@ exports.getSignup = (req, res) => {
   });
 };
 
+exports.getAccount = (req, res) => {
+  if (req.user) {
+    return res.redirect("/account");
+  }
+  res.render("signup", {
+    title: "Create Account",
+  });
+};
+
 exports.postSignup = (req, res, next) => {
   const validationErrors = [];
   if (!validator.isEmail(req.body.email))
@@ -82,16 +91,16 @@ exports.postSignup = (req, res, next) => {
   }
   req.body.email = validator.normalizeEmail(req.body.email, {
     gmail_remove_dots: false,
-  });
+  })
 
   const user = new User({
-    userName: req.body.userName,
+    // userName: req.body.userName,
     email: req.body.email,
     password: req.body.password,
   });
 
   User.findOne(
-    { $or: [{ email: req.body.email }, { userName: req.body.userName }] },
+    { email: req.body.email },
     (err, existingUser) => {
       if (err) {
         return next(err);
@@ -115,4 +124,26 @@ exports.postSignup = (req, res, next) => {
       });
     }
   );
+};
+
+exports.changePassword = (req, res) => {
+  const currentPassword = req.user.password;
+  const newPassword = req.body.newPassword;
+
+  if (currentPassword === newPassword) {
+    // The new password is the same as the current password
+    res.send('The new password must be different from the current password');
+  } else {
+    // Update the password in the database
+    User.findByIdAndUpdate(req.user._id, { password: newPassword }, (err) => {
+      if (err) {
+        // There was an error updating the password
+        res.send('There was an error updating your password');
+      } else {
+        // The password was successfully updated
+        alert('Password updated!');
+        res.redirect("/account");
+      }
+    })
+  }
 };

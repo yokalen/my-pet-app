@@ -10,6 +10,13 @@ module.exports = {
       console.log(err);
     }
   },
+  getAccount: async (req, res) => {
+    try {
+      res.render("account.ejs");
+    } catch (err) {
+      console.log(err);
+    }
+  },
   getAllPets: async (req, res) => {
     try {
       const pets = await Pet.find().sort({ createdAt: "desc" }).lean();

@@ -3,7 +3,7 @@
   <div class="row mt-5">
       <div class="col-6">
           <div>
-              <p><strong>Name</strong>: <%= user.userName %></p>
+              <!-- <p><strong>Name</strong>: <%= user.userName %></p> -->
               <p><strong>Email</strong>: <%= user.email %></p>
               <a href="/logout" class="col-3 btn btn-primary">Logout</a>
           </div>
@@ -15,13 +15,6 @@
                   <select id="animal" class="form-control" name="animal">
                     <option>dog</option>
                     <option>cat</option>
-                    <option id="other">other</option>
-                    <!-- <% document.querySelector('#other').addEventListener
-                      <div class="mb-3">
-                        <label for="other" class="form-label">Type of pet </label>
-                        <input type="text" class="form-control" id="other-animal" name="animal">
-                      </div>
-                    <% } %> -->
                     
                   </select>
               </div>
@@ -55,7 +48,7 @@
       </div>
       <div class="col-6">
         <ul class="row list-unstyled">
-        <% for(var i=0; i<pets.length; i++) {%>
+        <% for(var i=0; i<pets.length; i++) { %>
           <li class="col-6 justify-content-between mt-5">
             <a href="/pet/<%= pets[i]._id%>">
               <img class="img-fluid" src="<%= pets[i].image%>">
