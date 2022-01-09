@@ -17,13 +17,6 @@ module.exports = {
       console.log(err);
     }
   },
-  getAccount: async (req, res) => {
-    try {
-      res.render("account.ejs");
-    } catch (err) {
-      console.log(err);
-    }
-  },
   getAllPets: async (req, res) => {
     try {
       const pets = await Pet.find().sort({ createdAt: "desc" }).lean();
@@ -35,9 +28,7 @@ module.exports = {
   getPet: async (req, res) => {
     try {
       const petinfo = await Pet.findById(req.params.id);
-    //   const comments = await Comment.find( {post: req.params.id} ).sort({ createdAt: "desc" }).lean();
-    //   res.render("profile.ejs", { pet: pet, user: req.user, comments: comments });
-    res.render("pet.ejs", { pet: petinfo, user: req.user });
+      res.render("pet.ejs", { pet: petinfo, user: req.user });
     } catch (err) {
       console.log(err);
     }
@@ -52,14 +43,14 @@ module.exports = {
         name: req.body.name,
         image: result.secure_url,
         cloudinaryId: result.public_id,
-        // breed: req.body.breed,
-        // color: req.body.color,
-        // size: req.body.size,
+        //breed: req.body.breed,
+        color: req.body.color,
+        weight: req.body.weight,
         dob: req.body.dob,
         user: req.user.id,
       });
       console.log("Pet has been added!");
-      res.redirect("/mypets");
+      res.redirect("/profile");
     } catch (err) {
       console.log(err);
     }
@@ -68,10 +59,9 @@ module.exports = {
     try {
       // Find pet by id
       let pet = await Pet.findById({ _id: req.params.id });
-      console.log(pet)
       // Delete image from cloudinary
       await cloudinary.uploader.destroy(pet.cloudinaryId);
-      // Delete post from db
+      // Delete pet from db
       await Pet.deleteOne({ _id: req.params.id });
       console.log("Deleted Pet");
       res.redirect("/profile");
