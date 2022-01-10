@@ -21,14 +21,14 @@ const PetSchema = new mongoose.Schema({
   //   type: String,
   //   required: false,
   // },
-  // color: {
-  //   type: String,
-  //   required: true,
-  // },
-  // size: {
-  //   type: String,
-  //   required: true,
-  // },
+  color: {
+  type: String,
+  required: true,
+  },
+  weight: {
+    type: String,
+    required: true,
+  },
   dob: {
     type: Number,
     required: true,
