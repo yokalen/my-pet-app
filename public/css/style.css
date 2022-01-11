@@ -1,11 +1,11 @@
-/* * {
+* {
   border: 1px solid red;
-} */
+}
 
 footer {
     padding-top: 40px;
-    height: 60px; /* Height of the footer */
-    line-height: 60px; /* Vertically center the text there */
+    height: 60px; 
+    line-height: 60px; 
   }
   
 h1 {
@@ -60,9 +60,20 @@ div.title {
   text-align: center;
 }
 
-div.woah {
-  margin: 2rem;
-  /* flex: 0 0 auto;
-  align-items: center; */
+.center {
+  margin: 1rem;
   text-align: center;
+}
+
+.down {
+  margin: 2rem;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  text-decoration: underline;
 }
