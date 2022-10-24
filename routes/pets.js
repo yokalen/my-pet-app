@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const upload = require("../middleware/multer");
 const petsController = require("../controllers/pets");
-const { ensureAuth, ensureGuest } = require("../middleware/auth");
+const { ensureAuth } = require("../middleware/auth");
 
 //Post Routes - simplified for now
 router.get("/:id", ensureAuth, petsController.getPet);

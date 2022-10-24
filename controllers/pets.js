@@ -1,6 +1,5 @@
 const cloudinary = require("../middleware/cloudinary");
 const Pet = require("../models/Pet");
-const Comment = require("../models/Comment");
 
 module.exports = {
   getProfile: async (req, res) => {
@@ -14,7 +13,7 @@ module.exports = {
   getAllPets: async (req, res) => {
     try {
       const pets = await Pet.find().sort({ createdAt: "desc" }).lean();
-      res.render("feed.ejs", { pets: pets });
+      res.render("mypets.ejs", { pets: pets });
     } catch (err) {
       console.log(err);
     }
@@ -46,7 +45,7 @@ module.exports = {
         user: req.user.id,
       });
       console.log("Pet has been added!");
-      res.redirect("/profile");
+      res.redirect("/mypets");
     } catch (err) {
       console.log(err);
     }
@@ -60,9 +59,9 @@ module.exports = {
       // Delete post from db
       await Pet.remove({ _id: req.params.id });
       console.log("Deleted Pet");
-      res.redirect("/profile");
+      res.redirect("/mypets");
     } catch (err) {
-      res.redirect("/profile");
+      res.redirect("/mypets");
     }
   },
 };
