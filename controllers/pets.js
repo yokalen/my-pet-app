@@ -10,6 +10,13 @@ module.exports = {
       console.log(err);
     }
   },
+  addPet: async (req, res) => {
+    try {
+      res.render("addpet.ejs", { user: req.user });
+    } catch (err) {
+      console.log(err);
+    }
+  },
   getAccount: async (req, res) => {
     try {
       res.render("account.ejs");
