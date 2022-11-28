@@ -30,6 +30,12 @@ footer > p {
     box-shadow: 0 0 2px black;
   }
 
+.title h3 {
+  font-size: 1.5rem;
+  font-variant: small-caps;
+  padding-left: .4rem;
+}
+
 a.pet{
   font-family: 'Roboto', sans-serif;
   font-size: 125px;
