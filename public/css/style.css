@@ -20,3 +20,26 @@ footer > p {
 .login a:hover {
     box-shadow: 0 0 2px black;
   }
+
+/* * {
+  border: 1px solid red;
+} */
+
+a.pet{
+  font-family: 'Roboto', sans-serif;
+  font-size: 125px;
+  text-decoration: none;
+  color: darkgrey;
+  font-weight: lighter;
+}
+
+div.pet {
+  border: 4px solid grey;
+  background-color: white;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  line-height: 90px;
+  margin: 2rem 1rem;
+  text-align: center;
+}
