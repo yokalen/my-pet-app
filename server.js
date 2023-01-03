@@ -65,5 +65,5 @@ app.use("/pet", petRoutes);
 
 //Server Running
 app.listen(process.env.PORT, () => {
-  console.log(`Server is running on port ${process.env.PORT}, you better catch it!`);
+  console.log(`Server is running on port ${process.env.PORT}, you better go catch it!`);
 });
