@@ -1,3 +1,7 @@
+/* * {
+  border: 1px solid red;
+} */
+
 footer {
     padding-top: 40px;
     height: 60px; /* Height of the footer */
@@ -7,6 +11,11 @@ footer {
 h1 {
   font-family: 'Pacifico', cursive;
   font-size: 64px;
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
 }
 
 span {
@@ -20,10 +29,6 @@ footer > p {
 .login a:hover {
     box-shadow: 0 0 2px black;
   }
-
-/* * {
-  border: 1px solid red;
-} */
 
 a.pet{
   font-family: 'Roboto', sans-serif;
@@ -40,6 +45,11 @@ div.pet {
   width: 100px;
   height: 100px;
   line-height: 90px;
-  margin: 2rem 1rem;
+  margin: 1rem 1rem;
+  text-align: center;
+}
+
+div.title {
+  width: 125px;
   text-align: center;
 }
