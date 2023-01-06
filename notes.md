@@ -16,3 +16,7 @@ login => page with all pets, see wireframe drawings - link to logout, each pet i
 Before first pet is added, page with all pets is just a circle with a plus sign in the middle. Links to add pet form.
 
 future functionality: allow for co-owned pets. be able to share pet with others, i will see pets shared with me under pets, after my own pets
+
+building out profile view - see drawing
+
+add a pet functionality - it shouldn't be createPet path, new route /pets/addPet that renders ejs  - add pet form 
