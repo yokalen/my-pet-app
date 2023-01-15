@@ -10,14 +10,13 @@
     <div class="col-3 mt-5">
       <span><%= pet.name %> is a <%= pet.animal %></span>
     </div>
-    <div class="woah">
+    <div class="center">
       <form action="/pet/deletePet/<%=pet._id%>?_method=DELETE" method="POST">
       <button type="submit">Remove Pet Profile</button>
       </form>
     </div>
-    <div class="col-6 mt-5">
-      <a class="btn btn-primary" href="/profile">Return to Profile</a>
-      <a class="btn btn-primary" href="/mypets">Return to My Pets</a>
+    <div class="center down">
+      <a class="btn btn-primary" href="/profile">Back to All Pets</a>
     </div>
   </div>
 </div>
