@@ -8,7 +8,7 @@
       </div>
     </div>
     <div class="col-3 mt-5">
-      <span><%= pet.name %> is a <%= pet.animal %></span>
+      <span><%= pet.name %> is a <%= pet.color %> <%= pet.animal %>.</span>
     </div>
     <div class="center">
       <form action="/pet/deletePet/<%=pet._id%>?_method=DELETE" method="POST">
