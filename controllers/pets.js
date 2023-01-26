@@ -52,9 +52,9 @@ module.exports = {
         name: req.body.name,
         image: result.secure_url,
         cloudinaryId: result.public_id,
-        breed: req.body.breed,
-        color: req.body.color,
-        size: req.body.size,
+        // breed: req.body.breed,
+        // color: req.body.color,
+        // size: req.body.size,
         dob: req.body.dob,
         user: req.user.id,
       });

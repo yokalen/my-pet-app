@@ -14,29 +14,28 @@
             <h2>Add a pet</h2>
             <form action="/pet/createPet" enctype="multipart/form-data" method="POST">
               <div class="mb-3">
-                  <label for="animal" class="form-label">Type of pet</label>
-                  <select id="animal" class="form-control" name="animal">
-                    <option>dog</option>
-                    <option>cat</option>
-                    
-                  </select>
+                  <label for="animal" class="form-label"><h3>What type of pet do you have?</h3></label>
+                    <p><input type="radio" name="animal" value="cat">Cat</p>
+                    <p><input type="radio" name="animal" value="dog">Dog</p>
+                    <p><input type="radio" name="animal" checked>Other:
+                      <input type="text" name="other" value="animal"></p>
               </div>
               <div class="mb-3">
                   <label for="name" class="form-label">Pet name</label>
                   <input type="text" class="form-control" id="name" name="name">
               </div>
-              <div class="mb-3">
+              <!-- <div class="mb-3">
                 <label for="breed" class="form-label">Breed</label>
                 <textarea class="form-control" id="breed" name="breed"></textarea>
-              </div>
-              <div class="mb-3">
+              </div> -->
+              <!-- <div class="mb-3">
                 <label for="color" class="form-label">Color</label>
                 <input type="text" class="form-control" id="color" name="color">
-              </div>
-              <div class="mb-3">
+              </div> -->
+              <!-- <div class="mb-3">
                 <label for="size" class="form-label">Size</label>
                 <input type="text" class="form-control" id="size" name="size">
-              </div>
+              </div> -->
               <div class="mb-3">
                 <label for="dob" class="form-label">Date of birth (MMDDYYYY)</label>
                 <input type="number" class="form-control" id="dob" name="dob">

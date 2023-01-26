@@ -17,18 +17,18 @@ const PetSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
-  breed: {
-    type: String,
-    required: false,
-  },
-  color: {
-    type: String,
-    required: true,
-  },
-  size: {
-    type: String,
-    required: true,
-  },
+  // breed: {
+  //   type: String,
+  //   required: false,
+  // },
+  // color: {
+  //   type: String,
+  //   required: true,
+  // },
+  // size: {
+  //   type: String,
+  //   required: true,
+  // },
   dob: {
     type: Number,
     required: true,
