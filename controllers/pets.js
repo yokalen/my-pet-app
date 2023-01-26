@@ -67,9 +67,10 @@ module.exports = {
   deletePet: async (req, res) => {
     try {
       // Find pet by id
-      let post = await Pet.findById({ _id: req.params.id });
+      let pet = await Pet.findById({ _id: req.params.id });
+      console.log(pet)
       // Delete image from cloudinary
-      await cloudinary.uploader.destroy(post.cloudinaryId);
+      await cloudinary.uploader.destroy(pet.cloudinaryId);
       // Delete post from db
       await Pet.remove({ _id: req.params.id });
       console.log("Deleted Pet");

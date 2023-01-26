@@ -59,3 +59,10 @@ div.title {
   width: 125px;
   text-align: center;
 }
+
+div.woah {
+  margin: 2rem;
+  /* flex: 0 0 auto;
+  align-items: center; */
+  text-align: center;
+}

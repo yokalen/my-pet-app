@@ -11,6 +11,6 @@ router.post("/createPet", upload.single("file"), petsController.createPet);
 
 // router.put("/likePost/:id", postsController.likePost);
 
-// router.delete("/deletePost/:id", postsController.deletePost);
+router.delete("/deletePet/:id", petsController.deletePet);
 
 module.exports = router;
