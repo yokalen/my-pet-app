@@ -27,7 +27,8 @@ module.exports = {
   },
   getPet: async (req, res) => {
     try {
-      res.render("pet.ejs", { pet: petinfo, user: req.user });
+      const pet = await Pet.findById(req.params.id);
+      res.render("pet.ejs", { pet: pet, user: req.user });
     } catch (err) {
       console.log(err);
     }
