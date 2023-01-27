@@ -10,6 +10,12 @@
     <div class="col-3 mt-5">
       <span><%= pet.name %> is a <%= pet.color %> <%= pet.animal %>.</span>
     </div>
+  <!-- </div>
+  <section class="col-6">
+    <h3>Vaccine Records</h3>
+    
+
+  </section> -->
     <div class="center">
       <form action="/pet/deletePet/<%=pet._id%>?_method=DELETE" method="POST">
       <button type="submit">Remove Pet Profile</button>
