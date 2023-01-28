@@ -13,9 +13,20 @@ h1 {
   font-size: 64px;
 }
 
+h2 {
+  padding: 0 0 1rem 0;
+}
+
 h3 {
   font-family: 'Roboto', sans-serif;
   font-size: 1.5rem;
+}
+
+section {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 4rem;
+  padding-top: 2rem;
 }
 
 span {
