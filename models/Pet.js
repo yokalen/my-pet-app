@@ -2,15 +2,15 @@ const mongoose = require("mongoose");
 const SIZE_RULES = {
   // defines the size rules for each animal type 
   cat: [
-    { weight: 0, size: 'small' },
-    { weight: 10, size: 'medium' },
+    { weight: 10, size: 'small' },
+    { weight: 15, size: 'medium' },
     { weight: 20, size: 'large' },
   ],
   dog: [
-    { weight: 0, size: 'small' },
+    { weight: 25, size: 'small' },
     { weight: 45, size: 'medium' },
-    { weight: 75, size: 'large' },
-    { weight: Infinity, size: 'extra-large' },
+    { weight: 100, size: 'large' },
+    { weight: Infinity, size: 'giant' },
   ],
   // Add additional animal types and size rules as needed
 };
@@ -54,12 +54,13 @@ const PetSchema = new mongoose.Schema({
   },
   weight: {
     type: String,
-    required: true,
+    required: false,
   },
   size: {
     type: String,
-    required: true,
+    required: false,
     default: '',
+    enum: ['', 'small', 'medium', 'large', 'extra-large'],
   },
   dob: {
     type: Number,
@@ -75,9 +76,14 @@ const PetSchema = new mongoose.Schema({
   },
 });
 
-PetSchema.pre('save', function(){
+PetSchema.pre('save', function(next){
   //runs before saving a 'Pet' to the database, sets 'size' property
-  this.size = getSize(this.animal, this.weight);
+  if(this.weight === undefined) {
+    this.size = '';
+  }else{
+    this.size = getSize(this.animal, this.weight);
+  }
+  next();
 });
 
 module.exports = mongoose.model("Pet", PetSchema);
