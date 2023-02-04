@@ -46,7 +46,6 @@ module.exports = {
         //breed: req.body.breed,
         color: req.body.color,
         weight: req.body.weight,
-        dob: req.body.dob,
         user: req.user.id,
       });
       console.log("Pet has been added!");
