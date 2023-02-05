@@ -5,6 +5,7 @@ const SIZE_RULES = {
     { weight: 10, size: 'small' },
     { weight: 15, size: 'medium' },
     { weight: 20, size: 'large' },
+    { weight: Infinity, size: 'chonky' },
   ],
   dog: [
     { weight: 25, size: 'small' },
@@ -60,11 +61,12 @@ const PetSchema = new mongoose.Schema({
     type: String,
     required: false,
     default: '',
-    enum: ['', 'small', 'medium', 'large', 'extra-large'],
+    enum: ['', 'small', 'medium', 'large', 'giant', 'chonky'],
   },
   dob: {
-    type: Number,
-    required: true,
+    type: String,
+    required: false,
+    default: 'unknown',
   },
   user: {
     type: mongoose.Schema.Types.ObjectId,
@@ -80,8 +82,10 @@ PetSchema.pre('save', function(next){
   //runs before saving a 'Pet' to the database, sets 'size' property
   if(this.weight === undefined) {
     this.size = '';
-  }else{
+  }else if(this.animal === 'cat' || this.animal === 'dog'){
     this.size = getSize(this.animal, this.weight);
+  }else{
+    this.size = '';
   }
   next();
 });
