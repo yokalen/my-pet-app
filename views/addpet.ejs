@@ -17,7 +17,7 @@
                   <label for="animal" class="form-label"><h3>What type of pet do you have?</h3></label>
                     <p><input type="radio" name="animal" value="cat">Cat</p>
                     <p><input type="radio" name="animal" value="dog">Dog</p>
-                    <p><input type="radio" name="animal" checked>Other:
+                    <p><input type="radio" name="animal" checked value="animal">Other:
                       <input type="text" name="other" value="animal"></p>
               </div>
               <div class="mb-3">
@@ -25,8 +25,12 @@
                   <input type="text" class="form-control" id="name" name="name">
               </div>
               <div class="mb-3">
-                <label for="dob" class="form-label">Date of birth (MMDDYYYY)</label>
-                <input type="number" class="form-control" id="dob" name="dob">
+                <label for="dob" class="form-label">Birthday (optional)</label>
+                <div class="d-flex flex-row justify-content-space-between">
+                  <input type="number" class="form-control input-width-20" id="mm" name="mm" placeholder="MM" max="12">
+                  <input type="number" class="form-control input-width-20" id="dd" name="dd" placeholder="DD" max="31">
+                  <input type="number" class="form-control input-width-40" id="yyyy" name="yyyy" placeholder="YYYY" max="2023">
+                </div>
               </div>
               <div class="mb-3">
                 <label for="color" class="form-label">Color</label>
