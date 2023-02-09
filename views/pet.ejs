@@ -1,13 +1,11 @@
 <%- include('partials/header') -%>
 <div class="container">
   <div class="row justify-content-center mt-5">
-    <div class="col-6">
-      <h2><%= pet.name %></h2>
-      <img class="img-fluid" src="<%= pet.image%>" />
-      <div class="row justify-content-between">
-      </div>
+    <div class="text-center">
+      <h2 class="center"><%= pet.name %></h2>
+      <img class="mx-auto" src="<%= pet.image%>" />
     </div>
-    <div class="col-3 mt-5">
+    <div class="text-center my-5">
       <span><%= pet.name %> is a <%= pet.size %> <%= pet.color %> <%= pet.animal %>.</span>
     </div>
   <!-- </div>
