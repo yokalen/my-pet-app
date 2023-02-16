@@ -3,6 +3,17 @@
   border: 1px solid red;
 } */
 
+.bb::before {
+  display: block;
+  content: '';
+  height: 100px;
+}
+footer::before {
+  display: block;
+  content: '';
+  height: 150px;
+}
+
 footer {
     padding-top: 40px;
     height: 60px; 
