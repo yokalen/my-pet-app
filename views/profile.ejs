@@ -52,7 +52,7 @@
       <div class="col-8">
         <ul class="row list-unstyled">
         <% for(let i=0; i<pets.length; i++) { %>
-          <li class="col-4 justify-content-between mt-5">
+          <li class="col-sm-6  col-md-4 justify-content-between mt-5">
             <a href="/pet/<%= pets[i]._id%>">
               <img class="img-fluid" src="<%= pets[i].image%>">
               <ul class="row list-unstyled"><li class="center"><caption><%= pets[i].name %></caption></li></ul>
