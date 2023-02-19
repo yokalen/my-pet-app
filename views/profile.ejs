@@ -52,22 +52,26 @@
       <div class="col-8">
         <ul class="row list-unstyled">
         <% for(let i=0; i<pets.length; i++) { %>
-          <li class="col-sm-6  col-md-4 justify-content-between mt-5">
+          <li class="col-sm-6  col-md-4 col-8 justify-content-between mt-5">
             <a href="/pet/<%= pets[i]._id%>">
               <img class="img-fluid" src="<%= pets[i].image%>">
-              <ul class="row list-unstyled"><li class="center"><caption><%= pets[i].name %></caption></li></ul>
+              <ul class="row list-unstyled">
+                <li class="center">
+                  <caption><%= pets[i].name %></caption>
+                </li>
+              </ul>
             </a>
             
           </li>
         <% } %>
-          <li class="down col-4 mt-5">
-            <div class="title"><h3>add pet</h3></div>
-            <div class="pet row">
+            <li class="col-sm-6  col-md-4 col-8 justify-content-between mt-5 text-center">
+              <a href="/addPet" alt="add a pet" class="pet col-4">
+                <i class="fa-regular fa-plus"></i>
+              </a>
               
-              <a href="/addPet" alt="add a pet" class="pet col-4">+</a>
-            </div>
-          </li>
-        </ul>
+            </li>
+          </ul>
+          
         <!-- <div class="row justify-content-center mt-5">
           <a class="btn btn-primary" href="/feed">Return to Feed</a>
         </div>   -->
