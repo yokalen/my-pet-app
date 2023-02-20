@@ -23,28 +23,18 @@
   </head>
   <body>
     <header class="container">
-      <div class="text-center mt-3">
-        <h1 class="">My Pets</h1>
-        <span></span>
-      </div>
-    </header>
-    <!-- <body class="d-flex h-100s">
-      <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-      <nav class="navbar navbar-expand-sm navbar-light fixed-top" style="background-color: #cccc">
-        <div class="container">
-          <a class="navbar-brand" href="/">
-            <h1 class="center">My Pets</h1>
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-              <a class="btn btn-outline-dark btn-nav" href="/login" role="button">Login</a>
-              <a class="btn-sign-in btn btn-nav" href="/signup" role="button">Sign up</a> -->
-              <!-- <button href="/login" class="btn btn-outline-dark" type="submit">Login</button>
-              <button href="/signup" class="btn btn-dark" type="submit">Sign up</button> -->
-          <!-- </div>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fa-solid fa-user"></i>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+          <h6 class="dropdown-header">Name: <%= user.userName %></h6>
+          <p class="dropdown-item">Email: <%= user.email %></p></h6>
+          <div class="dropdown-divider"></div>
+          <a href="/logout" class="btn btn-primary mt-2 w-75">Logout</a>
         </div>
-      </nav> -->
+      </div>
+        <h1 class="text-center">My Pets</h1>
+    </header>
   </body>
 </html>
