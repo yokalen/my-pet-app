@@ -9,7 +9,7 @@ My Pets is a full-stack platform that allows users to create profiles for their 
 
 **Tech used:** HTML, CSS, JavaScript, EJS
 
-I built a full-stack web application using the Model-View-Controller (MVC) architecture pattern. For the server-side programming, I chose Node.js with Express and for the database, I utilized MongoDB. To enable image upload functionality, I integrated Multer into my application. Additionally, I used Bootstrap for the user interface.
+I built a full-stack web application using the Model-View-Controller (MVC) architecture pattern. For the server-side programming, I chose Node.js with Express and for the database, I utilized MongoDB. To enable image upload functionality, I integrated Multer into my application. Additionally, I used Bootstrap and EJS for the user interface.
 
 The MVC pattern allowed me to effectively separate my application's data, user interface, and control logic into three separate components: models, views, and controllers. By using Node.js with Express, I was able to develop a lightweight and flexible server-side framework that allowed me to quickly build my web application. MongoDB, on the other hand, offered a flexible and scalable NoSQL database that can store large amounts of data.
 
@@ -33,13 +33,13 @@ Overall, I am excited about these optimizations and believe they will greatly en
 
 Building this web application was a challenging but rewarding experience for me. It is the largest and most robust web application that I have built to date, and I learned a lot throughout the development process.
 
-One of my biggest accomplishments was successfully implementing the Model-View-Controller (MVC) architecture pattern. This allowed me to effectively separate my application's data, user interface, and control logic into three separate components, making it easier to manage and maintain the codebase. Additionally, I was able to successfully integrate several key technologies and frameworks, including Node.js, Express, MongoDB, Multer, and Bootstrap.
+One of my biggest accomplishments was successfully implementing the Model-View-Controller (MVC) architecture, making it easier to manage and maintain the codebase. Additionally, I was able to successfully integrate several key technologies and frameworks, including Node.js, Express, MongoDB, Multer, and Bootstrap.
 
 Another important lesson I learned while building this application was the importance of thorough planning and organization. Before starting the development process, I spent a significant amount of time outlining my project's requirements, creating a wireframe, and breaking down the tasks into manageable steps. This helped me stay on track and ensure that my application was meeting all of my original objectives.
 
-Finally, I learned that building web applications is an iterative process. Throughout the development process, I made many small tweaks and adjustments to the code, constantly refining and improving the application. This required me to be flexible and adaptable, as well as to embrace the "fail fast, learn faster" mentality.
+Finally, I learned that building web applications is an iterative process. Throughout development, I made many small tweaks and adjustments to the code, constantly refining and improving the application.
 
-Overall, I am thrilled with what I was able to accomplish with this web application, and I am excited to build even more and better applications in the future. I am confident that the skills and knowledge I gained while building this application will serve me well as I continue to pursue a career in web development.
+Overall, I am thrilled with what I was able to accomplish with this web application, and I am excited to build even more and better applications in the future. 
 
 ## Examples:
 Take a look at these other examples that I have in my portfolio:
