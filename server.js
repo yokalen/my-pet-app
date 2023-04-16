@@ -66,7 +66,7 @@ app.use("/pet", petRoutes);
 
 //Connect to the database before listening - for cyclic hosting
 connectDB().then(() => {
-  app.listen(PORT, () => {
+  app.listen(process.env.PORT, () => {
       console.log(`Server is now running on port ${process.env.PORT}!`);
   })
 })
