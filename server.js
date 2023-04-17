@@ -17,8 +17,8 @@ require("dotenv").config({ path: "./config/.env" });
 // Passport config
 require("./config/passport")(passport);
 
-//Connect To Database
-connectDB();
+//Connect To Database - changed for cyclic hosting
+//connectDB();
 
 //Using EJS for views
 app.set("view engine", "ejs");
@@ -59,7 +59,14 @@ app.use(flash());
 app.use("/", mainRoutes);
 app.use("/pet", petRoutes);
 
-//Server Running
-app.listen(process.env.PORT, () => {
-  console.log(`Server is now running on port ${process.env.PORT}!`);
-});
+//Server Running - changed for cyclic hosting
+// app.listen(process.env.PORT, () => {
+//   console.log(`Server is now running on port ${process.env.PORT}!`);
+// });
+
+//Connect to the database before listening - for cyclic hosting
+connectDB().then(() => {
+  app.listen(PORT, () => {
+      console.log(`Server is now running on port ${process.env.PORT}!`);
+  })
+})
