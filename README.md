@@ -2,6 +2,9 @@
 My Pets is a full-stack platform that allows users to create profiles for their pets. Users can upload photographs of their pets and provide detailed information about their pets' age, breed, and other attributes. The application uses an MVC architecture, with Node.js and Express on the back-end and MongoDB for data storage. Image upload is facilitated using Multer, and the UI is designed using Bootstrap. In addition to these features, I plan to integrate Fabric.js for image editing, as well as a vaccine record upload functionality.
 
 **Link to project:** https://my-pet-app-production-f89e.up.railway.app/
+Create your own login or use our demo: 
+email: demo@demo.com
+password: demo
 
 ![screenshot of logged in user profile page](https://github.com/yokalen/my-pet-app/blob/main/my-pet-app.png)
 
