@@ -7,7 +7,6 @@ Create your own login or use our demo:
 
 
 email: demo@demo.com
-
 password: demo
 
 ![screenshot of logged in user profile page](https://github.com/yokalen/my-pet-app/blob/main/my-pet-app.png)
