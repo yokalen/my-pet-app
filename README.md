@@ -3,6 +3,11 @@ My Pets is a full-stack platform that allows users to create profiles for their 
 
 **Link to project:** https://my-pet-app-production-f89e.up.railway.app/
 
+Create your own login or use our demo (see image below for demo email): 
+
+
+password: demo
+
 ![screenshot of logged in user profile page](https://github.com/yokalen/my-pet-app/blob/main/my-pet-app.png)
 
 ## How It's Made:
